@@ -18,7 +18,6 @@ unassignedRemoveBtns.forEach((item) => {
   item.addEventListener("click", removeItem);
 });
 
-
 function addNewToDo() {
   console.log('func triggered');
   //variable Assignment:
@@ -45,8 +44,6 @@ function addNewToDo() {
 
   inputBar.value = '';
 }
-
-
 
 //Remove Item function
 function removeAllCheckedItems(){
