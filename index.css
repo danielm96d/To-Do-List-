@@ -1,9 +1,48 @@
-ol .toDoItem:{
-  text-decoration: line-through;
-  border: 1px solid purple;
-} 
+main {
+  background-color: cornflowerblue;
+  padding: 10px;
+  margin: 10px;
+  border: 10px;
+  border-radius: 10px; 
+}
 
-main{
-  background-color: aqua;
+.listOfToDo li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+/* .listOfToDo li input[type='checkbox'] {
+  margin-right: 10px;
+} */
+
+.listOfToDo li .remove {
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.listOfToDo li .remove:hover {
+  background-color: darkred;
+}
+
+#input_bar {
+  width: calc(100% - 30px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+}
+
+
+.listOfToDo li.completed {
   text-decoration: line-through;
-} 
+  color: grey
+}
