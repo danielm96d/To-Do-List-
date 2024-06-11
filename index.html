@@ -3,25 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" width="device-width, initial-scale=1.0">
-    <style src="index.css" type="css/text"></style>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
     <script src="index.js" defer></script>
     <title> To-List </title>  
   </head>
   <body>
-    <h1>Congrats, You have stuff to accomplish!</h1>
     <main>
-      <button class="addToList" type="submit">Add a new item to your list!</button>
-      <button class="removeFromList" type="submit">Remove item to your list!</button>
-      <ol class="listOfToDo">
-        <li><input type="checkbox" name="start-here">Here lies the first task<button >Remove</button></li>
-        <li><input type="checkbox" name="start-here">Here lies the second task<button >Remove</button></li>
+    <h1>Congrats, you have stuff to accomplish!</h1>
+    <div>
+      <input type="text" id="input_bar" class="inputBar" placeholder="Insert your new to-do here" name="export field for new to-do"> 
+      <button id="input_button_top" type="submit" name="inputButton">Add a new item to your list!</button>
+      <button id="remove_button_top" type="submit">Remove item to your list!</button>
+    </div>
 
+      <ol class="listOfToDo">
+        <li><input class="toDoItem" type="checkbox" name="start-here" checked>Here lies the first task<button class="remove">Remove</button></li>
+        <li><input class="toDoItem" type="checkbox" name="start-here">${newToDo}<button class="remove">Remove</button></li>
       </ol>
     </main>
-
+    
+    <button id="input_button_bottom" type="submit" name="inputButton">Add a new item to your list!</button>
+    <button id="remove_button_bottom" type="submit">Remove item to your list!</button>
+ 
   </body>
   <footer>      
-    <button class="addToList" type="submit">Add a new item to your list!</button>
-    <button class="removeFromList" type="submit">Remove item to your list!</button>
-  </footer>
+</footer>
 </html>

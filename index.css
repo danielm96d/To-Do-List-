@@ -1,0 +1,9 @@
+ol .toDoItem:{
+  text-decoration: line-through;
+  border: 1px solid purple;
+} 
+
+main{
+  background-color: aqua;
+  text-decoration: line-through;
+} 
