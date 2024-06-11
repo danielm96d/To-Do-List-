@@ -9,23 +9,21 @@
   </head>
   <body>
     <main>
-    <h1>Congrats, you have stuff to accomplish!</h1>
-    <div>
-      <input type="text" id="input_bar" class="inputBar" placeholder="Insert your new to-do here" name="export field for new to-do"> 
-      <button id="addItemBtn" type="submit" name="inputButton">Add a new item to your list!</button>
-      <button id="removeCheckedItemsBtn" type="submit">Remove item to your list!</button>
-    </div>
-
+      <h1>Congrats, you have stuff to accomplish!</h1>
+      <div>
+        <input type="text" id="input_bar" class="inputBar" placeholder="Insert your new to-do here" name="export field for new to-do"> 
+        <button class="addItemBtn" type="submit" name="inputButton">Add a new item to your list!</button>
+        <button class="removeCheckedItemsBtn" type="submit">Remove item from your list!</button>
+      </div>
+      
       <ol class="listOfToDo">
-        <li><input class="toDoItem" type="checkbox" name="start-here" checked>Here lies the first task<button class="remove">Remove</button></li>
-        <li><input class="toDoItem" type="checkbox" name="start-here">${newToDo}<button class="remove">Remove</button></li>
+        <li class = 'item'><input class="toDoItem" type="checkbox" name="start-here"><label><b>CHALLENGER, HERE LIES YOUR FIRST TASK</b></label><button class="remove">Remove</button></li>
+        <li><input class="toDoItem" type="checkbox" name="start-here"><i><label>Remove whatever task you want!</label></i><button class="remove">Remove</button></li>
       </ol>
+      <footer>      
+        <button class="addItemBtn" type="submit" name="inputButton">Add a new item to your list!</button>
+        <button class="removeCheckedItemsBtn" type="submit">Remove item from your list!</button>
+      </footer>
     </main>
-    
-    <button id="addItemBtn" type="submit" name="inputButton">Add a new item to your list!</button>
-    <button id="removeCheckedItemsBtn" type="submit">Remove item to your list!</button>
- 
   </body>
-  <footer>      
-</footer>
 </html>

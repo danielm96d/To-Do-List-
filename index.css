@@ -6,6 +6,10 @@ main {
   border-radius: 10px; 
 }
 
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .listOfToDo li {
   display: flex;
   align-items: center;
@@ -13,13 +17,13 @@ main {
   margin: 10px 0;
   padding: 5px;
   border: 1px solid black;
-  font-size: 20px;
+  font-size: auto;
   border-radius: 5px;
 }
 
-/* .listOfToDo li input[type='checkbox'] {
+.listOfToDo li input[type='checkbox'] {
   margin-right: 10px;
-} */
+}
 
 .listOfToDo li .remove {
   background-color: crimson;
@@ -39,10 +43,40 @@ main {
   margin-bottom: 10px;
   border: 1px solid darkblue;
   border-radius: 5px;
+  box-shadow: 2px 1px 3px black inset;
 }
 
+.removeCheckedItemsBtn, .addItemBtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 0;
+}
 
-.listOfToDo li.completed {
+.removeCheckedItemsBtn:hover, .addItemBtn:hover {
+  background-color: #45a049;
+}
+
+/* li input:checked ~label{
   text-decoration: line-through;
-  color: grey
+  color: darkgray;
+} */
+li:has(input:checked) {
+  text-decoration: line-through;
+  background-color: grey;
+  /* it works */
+  /* NICE!!!!!! */
+
+}
+
+li{
+  background-color: antiquewhite;
+  box-shadow: 2px 2px 3px;
+}
+ 
+button {
+  box-shadow: 2px 2px 3px black;
 }

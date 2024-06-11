@@ -1,16 +1,23 @@
 
 //Get variable assignment
-const addItemBtns = document.querySelectorAll('#addItemBtn'); 
-const removeCheckedItemsBtn = document.querySelectorAll('#removeCheckedItemsBtn');
+const addItemBtns = document.querySelectorAll('.addItemBtn'); 
+const removeCheckedItemsBtn = document.querySelectorAll('.removeCheckedItemsBtn');
+const unassignedRemoveBtns = document.querySelectorAll('.remove');
+// console.log(unassignedRemoveBtns);
 
 //EventListener Assignements
 addItemBtns.forEach((item) => {
   item.addEventListener("click", addNewToDo);
 });
 removeCheckedItemsBtn.forEach((item) => {
-  console.log('assigned');
+  // console.log('assigned');
   item.addEventListener("click", removeAllCheckedItems);
 });
+unassignedRemoveBtns.forEach((item) => {
+  // console.log('assigned');
+  item.addEventListener("click", removeItem);
+});
+
 
 function addNewToDo() {
   console.log('func triggered');
@@ -27,7 +34,7 @@ function addNewToDo() {
 
   //create our item
   const newItem = document.createElement('li');
-  newItem.innerHTML=`<input class="toDoItem" type="checkbox" name="start-here">${newToDo}<button class="remove">Remove</button>`;
+  newItem.innerHTML=`<input class="toDoItem" type="checkbox" name="start-here"><label>${newToDo}</label><button class="remove">Remove</button>`;
   
   //adds new item to the overall list
   document.querySelector('.listOfToDo').appendChild(newItem);
@@ -35,6 +42,7 @@ function addNewToDo() {
   //add event listener to the added item
   let rmBtn = newItem.querySelector('.remove');
   rmBtn.addEventListener('click', removeItem);
+
   inputBar.value = '';
 }
 
